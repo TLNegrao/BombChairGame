@@ -1,29 +1,3 @@
-// const BombChairGame = artifacts.require("BombChairGame");
-
-// contract("BombChairGame", (accounts) => {
-//   let bombChairGameInstance;
-
-//   beforeEach(async () => {
-//     bombChairGameInstance = await BombChairGame.new({ from: accounts[0] });
-//   });
-
-//   it("deve criar uma nova instância do jogo", async () => {
-//     const chosenNumber = 3; // Número escolhido para o teste
-//     const player = accounts[0]; // Endereço do jogador para o teste
-  
-//     // Chama a função criarNovaInstanciaJogo
-//     await bombChairGameInstance.criarNovaInstanciaJogo(chosenNumber, {
-//       from: player,
-//       value: web3.utils.toWei("1", "ether"),
-//     });
-  
-//     // Verifica se a instância foi criada corretamente
-//     const gameInstance = await bombChairGameInstance.jogos(1); // O número do contrato pode variar
-  
-
-//   });
-// });
-
 const BombChairGame = artifacts.require("BombChairGame");
 
 contract("BombChairGame", (accounts) => {
