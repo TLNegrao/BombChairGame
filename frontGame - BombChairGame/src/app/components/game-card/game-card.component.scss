@@ -1,0 +1,70 @@
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .col-xs-12,
+  .col-sm-6,
+  .col-md-4,
+  .col-md-3 {
+    flex: 0 0 auto;
+    max-width: none;
+  }
+
+
+
+
+.container .row {
+    margin:0px;
+    text-align:center;
+}
+
+.container .row img {
+    margin:10 15px;
+}
+
+.detonador {
+    padding-top:25px;
+}
+
+
+
+@media (max-width: 767px) {
+    .container .row {
+        margin: 10px; /* Ajuste a margem para um valor mais apropriado em telas menores */
+    }
+  
+    .container .row img {
+        margin: 10px 10px; /* Ajuste a margem para um valor mais apropriado em telas menores */
+        
+    }
+  
+  .row > * {
+      flex-shrink: 1;
+      width: min-content;
+      max-width: none;
+      // padding-right: initial;
+      // padding-left: initial;
+      margin-top: initial;
+  }
+  
+    img{
+      margin-left: 5px;
+      width: 50px; /* Ajuste a largura das imagens para caber melhor em telas menores */
+        height: 50px; /* Ajuste a altura das imagens conforme necessário */
+    }
+  
+    .detonadorWin {
+      margin-top: 25px;
+      width: 20px; /* Ajuste a largura das imagens para caber melhor em telas menores */
+        height: 20px; 
+    }
+  
+  
+    .small-image3{
+      margin-top: 8px;
+    }
+  
+  }
+  

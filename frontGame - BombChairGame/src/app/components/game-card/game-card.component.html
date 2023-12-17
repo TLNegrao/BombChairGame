@@ -1,0 +1,91 @@
+<div class="container-fluid">
+
+  <div class="modal-header">
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-1 text-center">
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+      <ng-container *ngIf="isAnyNumberAvailable([1])">
+        <img src="../../../assets/images/imagJogo/1a.png" alt="" width="100" height="100" style="margin-left: -20px;">
+      </ng-container>
+      <ng-container *ngIf="!isAnyNumberAvailable([1])">
+        <img src="../../../assets/images/imagJogo/1b.png" alt="" width="100" height="100">
+      </ng-container>
+    </div>
+
+    <div class="col-sm-1 text-center">
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+      <ng-container *ngIf="isAnyNumberAvailable([2])">
+        <img src="../../../assets/images/imagJogo/2a.png" alt="" width="100" height="100" style="margin-top: 5px;">
+      </ng-container>
+      <ng-container *ngIf="!isAnyNumberAvailable([2])">
+        <img src="../../../assets/images/imagJogo/2b.png" alt="" width="100" height="100">
+      </ng-container>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+      <ng-container *ngIf="isAnyNumberAvailable([6])">
+        <img src="../../../assets/images/imagJogo/6a.png" alt="" width="100" height="100" style="margin-left: -10px;">
+      </ng-container>
+      <ng-container *ngIf="!isAnyNumberAvailable([6])">
+        <img src="../../../assets/images/imagJogo/6b.png" alt="" width="100" height="100" style="margin-left: -10px;">
+      </ng-container>
+    </div>
+
+    <div class="col-md-3 text-center detonador">
+      <img src="../../../assets/images/imagJogo/Detonador.png" alt="" width="60" height="80" re>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+      <ng-container *ngIf="isAnyNumberAvailable([3])">
+        <img src="../../../assets/images/imagJogo/3a.png" alt="" width="100" height="100" style="margin-top: 5px;">
+      </ng-container>
+      <ng-container *ngIf="!isAnyNumberAvailable([3])">
+        <img src="../../../assets/images/imagJogo/3b.png" alt="" width="100" height="100">
+      </ng-container>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-sm-1 text-center">
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+      <ng-container *ngIf="isAnyNumberAvailable([5])">
+        <img src="../../../assets/images/imagJogo/5a.png" alt="" width="100" height="100" style="margin-left: -15px;">
+      </ng-container>
+      <ng-container *ngIf="!isAnyNumberAvailable([5])">
+        <img src="../../../assets/images/imagJogo/5b.png" alt="" width="100" height="100" style="margin-left: -10px;">
+      </ng-container>
+    </div>
+
+    <div class="col-sm-1 text-center">
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+      <ng-container *ngIf="isAnyNumberAvailable([4])">
+        <img src="../../../assets/images/imagJogo/4a.png" alt="" width="100" height="100" style="margin-top: 5px;">
+      </ng-container>
+      <ng-container *ngIf="!isAnyNumberAvailable([4])">
+        <img src="../../../assets/images/imagJogo/4b.png" alt="" width="100" height="100">
+      </ng-container>
+    </div>
+
+  </div>
+
+</div>

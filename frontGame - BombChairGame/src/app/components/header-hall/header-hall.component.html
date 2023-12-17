@@ -1,0 +1,27 @@
+<div class="container" id="nav-container">
+    <nav class="navbar navbar-expand-lg fixed-top teste navbar-dark">
+    
+        <span class="navbar-brand" href="index.html">
+            <div class="d-flex align-items-center">
+                <img id="logo" src="../../../assets/images/kisspng-barber-chair-clip-art-seat-5a7d0c7cb4d9b2.4689715015181446367408.png" alt="BombChair" class="name">
+                <span class="ms-2 me-auto">BombChair</span><span class="version">v 1.0</span> 
+            </div>
+        </span>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+            aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+
+            <div class="caixa d-flex align-items-center">
+                <span class="wallet-text me-lg-2" style="color: rgb(231, 30, 231); font-family: Teste;">Wallet:</span>
+                <span class="wallet-text me-lg-4" style="color: rgb(231, 30, 231); font-family: Teste;"> {{ walletAddress | slice:0:6 }}...{{walletAddress | slice:-4 }}</span>
+                <span class="wallet-text me-lg-3" style="color: rgb(231, 30, 231); font-family: Teste;">{{walletBalance | slice:0:5}}eth</span>
+                <button class="botao" type="button" (click)="disconnect()">Sair</button>
+            </div>  
+
+        </div>
+
+    </nav>
+</div>

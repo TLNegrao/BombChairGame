@@ -1,0 +1,94 @@
+<div class="container-fluid">
+  <div>
+
+    <div class="row">
+
+      <div class="col-sm-1 text-center">
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <ng-container *ngIf="isNumberAvailable(game, 1)">
+          <img src="../../../assets/images/imagJogo/1c.png" alt="" width="100" height="100" style="margin-left: -35px;"
+            class="small-image">
+        </ng-container>
+        <ng-container *ngIf="!isNumberAvailable(game, 1)">
+          <img src="../../../assets/images/imagJogo/1d.png" alt="" width="100" height="100" style="margin-left: -25px;"
+            class="small-image">
+        </ng-container>
+      </div>
+
+      <div class="col-sm-1 text-center">
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <ng-container *ngIf="isNumberAvailable(game, 2)">
+          <img src="../../../assets/images/imagJogo/2c.png" alt="" width="100" height="100" class="small-image">
+        </ng-container>
+        <ng-container *ngIf="!isNumberAvailable(game, 2)">
+          <img src="../../../assets/images/imagJogo/2d.png" alt="" width="100" height="100" class="small-image">
+        </ng-container>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <ng-container *ngIf="isNumberAvailable(game, 6)">
+          <img src="../../../assets/images/imagJogo/6c.png" alt="" width="100" height="100" style="margin-left: -20px;"
+            class="small-image">
+        </ng-container>
+        <ng-container *ngIf="!isNumberAvailable(game, 6)">
+          <img src="../../../assets/images/imagJogo/6d.png" alt="" width="100" height="100" style="margin-left: -20px;"
+            class="small-image">
+        </ng-container>
+      </div>
+
+      <div class="col-md-3 text-center detonador">
+        <img src="../../../assets/images/imagJogo/DetonadorB.png" class="detonadorWin small-image">
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <ng-container *ngIf="isNumberAvailable(game, 3)">
+          <img src="../../../assets/images/imagJogo/3c.png" alt="" width="100" height="100" class="small-image">
+        </ng-container>
+        <ng-container *ngIf="!isNumberAvailable(game, 3)">
+          <img src="../../../assets/images/imagJogo/3d.png" alt="" width="100" height="100" style="margin-top: 10px;"
+            class="small-image3">
+        </ng-container>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-1 text-center">
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <ng-container *ngIf="isNumberAvailable(game, 5)">
+          <img src="../../../assets/images/imagJogo/5c.png" alt="" width="100" height="100" style="margin-left: -35px;"
+            class="small-image">
+        </ng-container>
+        <ng-container *ngIf="!isNumberAvailable(game, 5)">
+          <img src="../../../assets/images/imagJogo/5d.png" alt="" width="100" height="100" style="margin-left: -29px;"
+            class="small-image">
+        </ng-container>
+      </div>
+
+      <div class="col-sm-1 text-center">
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <ng-container *ngIf="isNumberAvailable(game, 4)">
+          <img src="../../../assets/images/imagJogo/4c.png" alt="" width="100" height="100" class="small-image">
+        </ng-container>
+        <ng-container *ngIf="!isNumberAvailable(game, 4)">
+          <img src="../../../assets/images/imagJogo/4d.png" alt="" width="100" height="100" class="small-image">
+        </ng-container>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<button type="button" class="teste2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  +
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content teste">
+      <div class="modal-header" style="color: rgb(231, 30, 231);">
+        <h5 class="modal-title" id="staticBackdropLabel">Criar jogo</h5>
+      </div>
+
+      <div class="modal-body">
+        <p>Escolha o valor:</p>
+
+        <form id="valueGameForm"  (ngSubmit)="newGameForm()">
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="valor1" id="valor1" [(ngModel)]="betAmount" [value]="1"> 1
+            </div>
+          </div>
+
+
+        </form>
+
+      </div>
+
+      <div class="modal-body">
+        <p>Escolha o número:</p>
+        <form id="numberGameForm" (ngSubmit)="newGameForm()">
+          <div class="d-flex flex-wrap">
+            <div class="col-6">
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="escolhaNumero1" id="escolhaNumero1" [(ngModel)]="chosenNumber" [value]="1"> 1
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="escolhaNumero2" id="escolhaNumero2" [(ngModel)]="chosenNumber" [value]="2"> 2
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="escolhaNumero3" id="escolhaNumero3" [(ngModel)]="chosenNumber" [value]="3"> 3
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="escolhaNumero4" id="escolhaNumero4" [(ngModel)]="chosenNumber" [value]="4"> 4
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="escolhaNumero5" id="escolhaNumero5" [(ngModel)]="chosenNumber" [value]="5"> 5
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="escolhaNumero6" id="escolhaNumero6" [(ngModel)]="chosenNumber" [value]="6"> 6
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModal()">Cancelar</button>
+            <button type="submit" class="btn botao" >Registrar</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

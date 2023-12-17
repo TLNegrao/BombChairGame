@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <app-header-hall (sideNavToggled)="sideNavStatus = $event"></app-header-hall>
+    <main>
+        <app-sidebar (sideNavToggled)="sideNavStatus = $event" [sideNavStatus]="sideNavStatus"
+            [ngClass]="{'app-sidebar-open': sideNavStatus}"></app-sidebar>
+        <div class="display-area p-3" [ngClass]="{'display-area-shrink': sideNavStatus}">
+
+            <div style="margin-top: 100px;">
+
+                <div>
+                    <button type="button" class="botao btn btn-primary" [routerLink]="['/hall']">Voltar</button>
+                    <button type="button" class="botao btn btn-secondary" (click)="winsPlayerWallet()">Vitorias</button>
+                    <button type="button" class="botao btn btn-secondary"
+                        (click)="lossesPlayerWallet()">Derrotas</button>
+                    <button type="button" class="botao btn btn-secondary" (click)="todos()">Todos</button>
+                </div>
+                <br>
+                
+                <div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3" *ngFor="let game of games">
+                            <div class="card" style="width: 20rem;">
+                                <div class="card-body">
+                                    <div class="card-body d-flex flex-column align-items-center">
+                                        <app-game-card-win [gameId]="game._id"></app-game-card-win>
+                                    </div>
+                                    <p class="card-text">
+                                        Jogo: {{ game._id | slice:-8 }}<br>
+                                        Inicio: {{game.gameStartDate | date:'dd/MM/yy HH:mm a'}}<br>
+                                        Finalizado {{game.gameEndDate | date:'dd/MM/yy HH:mm a'}}<br>
+                                        N Sorteado: {{game.winningNumber || 'N/A' }}<br>
+                                        Vencedor: {{ game.publicWinnerAddress | slice:0:6 }}...{{ game.publicWinnerAddress | slice:-4 }}
+                                    </p>
+                                </div>
+                                <button type="button" class="btn botao" data-bs-toggle="modal"
+                                    [attr.data-bs-target]="'#playerNumber-'+game._id"
+                                    (click)="openModal(game._id); getIdGame.getGameId(game._id)">Abrir Jogo</button>
+                                <app-who-played [gameId]="game._id" #getIdGame></app-who-played>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ng-container *ngIf="semVitoria && games.length === 0">
+                    <h1 class="t" style="color: white;">Você ainda não venceu no jogo</h1>
+                </ng-container>
+
+                <ng-container *ngIf="numeroDerrotas && games.length === 0">
+                    <h1 class="t" style="color: white;">Você ainda não possui derrotas</h1>
+                </ng-container>
+
+                <ng-container *ngIf="semJogos && games.length === 0">
+                    <h1 class="t" style="color: white;">Não existem jogos a serem mostrados</h1>
+                </ng-container>
+
+            </div>
+        </div>
+    </main>
+</div>

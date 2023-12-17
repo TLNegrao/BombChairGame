@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Teste;
+    src: url(../../../assets/font/RetroGaming.ttf);
+}
+
+.teste{
+    color: rgb(231, 30, 231);
+    background-color: #16191b;
+    border-color: rgb(231, 30, 231);
+    border-width: 5px;
+    font-weight: bold;
+    font-family: Teste; 
+}
+
+.teste2{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    color: rgb(231, 30, 231);
+    background-color: #16191b;
+    border-color: rgb(231, 30, 231);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-width: 5px;
+    z-index: 1000;
+    font-family: Teste; 
+}
+
+
+.btn-primary{
+
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-hover-bg: rgb(231, 30, 231);
+    --bs-btn-hover-border-color: #FFF;
+    --bs-btn-border-width: 5px;
+    --bs-btn-border-radius: 10px; 
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #16191b;
+    --bs-btn-active-border-color: rgb(231, 30, 231); 
+    // --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-color: #FFF; 
+    --bs-btn-hover-bg: rgb(231, 30, 231);
+    --bs-btn-hover-border-color: #FFF;
+    font-family: Teste; 
+
+}
+
+.btn:focus {
+    --bs-btn-color: rgb(231, 30, 231);
+    --bs-btn-bg: #ffff;
+    --bs-btn-border-color: rgb(231 30 231);
+    font-family: Teste; 
+}
+
+.container{
+    flex-direction: row-reverse;
+    margin-top: 90px;
+    margin-bottom: 0px;
+    background-color: #16191b;
+    padding-left: 70%;
+    font-family: Teste; 
+}
+
+
+.botao {
+    display: inline-block; /* ou display: inline; */
+    text-align: center;
+    font-weight: 700;
+    background-color: rgb(231, 30, 231);
+    color: #FFF;
+    border-color: #FFF;
+    width: auto; /* Remova a largura fixa para que eles possam se ajustar automaticamente */
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: Teste;
+    margin-right: 5px; /* Adicione margem direita para separar os botões */
+}
+
+.botao:hover {
+    background-color: #ffff;
+    color: rgb(231, 30, 231);
+    border-color: rgb(231, 30, 231);
+    cursor: pointer;
+}
+
+
+.botaoCancelar {
+    display: inline-block; /* ou display: inline; */
+    text-align: center;
+    font-weight: 700;
+    background-color: #ffff;
+    color: rgb(231, 30, 231);
+    border-color: rgb(231, 30, 231);
+    width: auto; /* Remova a largura fixa para que eles possam se ajustar automaticamente */
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: Teste;
+    margin-right: 5px; /* Adicione margem direita para separar os botões */
+}

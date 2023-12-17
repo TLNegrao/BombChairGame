@@ -1,0 +1,45 @@
+<div class="modal fade caixa modal-custom" [id]="'playerNumber-' + gameId" tabindex="-1"
+  aria-labelledby="playerNumberLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content caixa2">
+
+      <ul class="list-group">
+        <p>Jogo: {{ gameId | slice:-8}} <br>
+          Aberto em: {{idGame.gameStartDate | date:'dd/MM/yy HH:mm a'}}
+
+        </p>
+        <p>"Não há vitória sem risco." - J.P. Morgan</p>
+        <ng-container *ngFor="let numero of [1, 2, 3, 4, 5, 6]">
+          <li>
+            Jogador {{numero}} :
+            <ng-container *ngIf="!getTicketByNumber(numero)">
+            </ng-container>
+            <ng-container *ngIf="getTicketByNumber(numero)">
+              {{ getTicketByNumber(numero).publicAddress | slice:0:6 }}...{{ getTicketByNumber(numero).publicAddress |
+              slice:-4}}
+
+            </ng-container>
+          </li>
+        </ng-container>
+      </ul>
+
+      <div class="modal-footer">
+        <button type="button" class="btn botaoCancelar btn-cancelar" data-bs-dismiss="modal"
+          (mouseover)="mouseOverCancelar()" (mouseleave)="mouseLeaveCancelar()"
+          [class.hide]="mouseSobreApostar">Cancelar</button>
+
+        <button type="button" class="btn botao" data-bs-toggle="modal" data-bs-target="#newPlayerNumber"
+          (click)="getGameId(idGame._id)" (mouseover)="mouseOverApostar()"
+          (mouseleave)="mouseLeaveApostar()">Apostar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+
+</div>
+
+<app-enter-game #teste></app-enter-game>

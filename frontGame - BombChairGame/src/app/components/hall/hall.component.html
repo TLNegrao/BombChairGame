@@ -1,0 +1,32 @@
+<div class="container-fluid g-0">
+
+  <app-header-hall></app-header-hall>
+
+  <app-sidebar (sideNavToggled)="sideNavStatus = $event" [sideNavStatus]="sideNavStatus"
+    [ngClass]="{'app-sidebar-open': sideNavStatus}"></app-sidebar>
+  <div class="display-area p-3" [ngClass]="{'display-area-shrink': sideNavStatus}">
+
+    <div style="margin-top: 100px;">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let game of games">
+          <div class="card mb-3" style="width: 18rem;">
+            <div class="card-body">
+              <app-game-card [gameId]="game._id"></app-game-card>
+              <p class="card-text" style="margin-top: 10px;">
+                Jogo: {{ game._id | slice:-8 }}<br>
+                Aberto em: {{game.gameStartDate | date:'dd/MM/yy HH:mm a'}}<br>
+              </p>
+              <div>
+                <button type="button" class="btn botao btn" style="width: 100%;" data-bs-toggle="modal"
+                  [attr.data-bs-target]="'#playerNumber-'+game._id"
+                  (click)="openModal(game._id); getIdGame.getGameId(game._id)">Abrir Jogo</button>
+              </div>
+              <app-who-is-playing [gameId]="game._id" #getIdGame></app-who-is-playing>
+            </div>
+          </div>
+        </div>
+        <app-create-game *ngIf="games.length === 0"></app-create-game>
+      </div>
+    </div>
+  </div>
+</div>

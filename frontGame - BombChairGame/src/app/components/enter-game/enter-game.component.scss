@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Teste;
+    src: url(../../../assets/font/RetroGaming.ttf);
+}
+
+@font-face {
+    font-family: Teste2;
+    src: url(../../../assets/font/RetroGaming.ttf);
+
+}
+
+  
+.main-content {
+    padding: 30px 15px;
+    min-height: calc(50px - 123px);
+}
+
+
+.caixa{
+    font-family: Teste2; 
+    color: rgb(231, 30, 231);
+}
+
+.caixa2{
+    background-color: #333333;
+}
+
+
+.botao {
+    display: inline-block; /* ou display: inline; */
+    text-align: center;
+    font-weight: 700;
+    background-color: rgb(231, 30, 231);
+    color: #FFF;
+    border-color: #FFF;
+    width: auto; /* Remova a largura fixa para que eles possam se ajustar automaticamente */
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: Teste;
+    margin-right: 5px; /* Adicione margem direita para separar os botões */
+}
+
+.botao:hover {
+    background-color: #ffff;
+    color: rgb(231, 30, 231);
+    border-color: rgb(231, 30, 231);
+    cursor: pointer;
+}
+
+
+.botaoCancelar {
+    display: inline-block; /* ou display: inline; */
+    text-align: center;
+    font-weight: 700;
+    background-color: #ffff;
+    color: rgb(231, 30, 231);
+    border-color: rgb(231, 30, 231);
+    width: auto; /* Remova a largura fixa para que eles possam se ajustar automaticamente */
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: Teste;
+    margin-right: 5px; /* Adicione margem direita para separar os botões */
+}
+
+.botaoCancelar.hide {
+    display: none;
+}
+
+.modal-custom .modal-dialog {
+    margin-top: 60px; /* Ajuste a altura conforme necessário */
+}

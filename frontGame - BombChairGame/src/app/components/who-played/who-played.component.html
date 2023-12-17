@@ -1,0 +1,39 @@
+<div class="modal fade caixa" [id]="'playerNumber-' + gameId" tabindex="-1" aria-labelledby="playerNumberLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    
+    <div class="modal-content caixa2">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="newPlayerNumberLabel">Jogo: {{gameId | slice:-8}}</h1>
+      </div>
+
+      <ul class="list-group">
+        <p>
+          Abertura: {{ idGame.gameStartDate | date:'dd/MM/yy HH:mm a'}} <br>
+          Fechamento: {{ idGame.gameEndDate | date:'dd/MM/yy HH:mm a'}} <br>
+          N. Sorteado: {{ idGame.winningNumber}} <br>
+          Vencedor: {{ idGame.publicWinnerAddress | slice:0:6}}...{{ idGame.publicWinnerAddress | slice:-4}} <br>
+        </p>
+
+        <ng-container *ngFor="let numero of [1, 2, 3, 4, 5, 6]">
+          <li>
+            Jogador {{numero}} :
+            <ng-container *ngIf="!getTicketByNumber(numero)">
+            </ng-container>
+            <ng-container *ngIf="getTicketByNumber(numero)">
+              {{ getTicketByNumber(numero).publicAddress | slice:0:6 }}...{{ getTicketByNumber(numero).publicAddress |
+              slice:-4 }};
+            </ng-container>
+          </li>
+        </ng-container>
+      </ul>
+
+      <div class="modal-footer">
+        <button type="button" class="btn botaoCancelar btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>

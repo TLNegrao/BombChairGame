@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Teste;
+    src: url(../../../assets/font/the-video-arcade-game-font-arcade.ttf);
+}
+
+  /* Gerais */
+  body {
+    font-family: Teste;
+}
+    
+.row {
+    margin: 0;
+}
+    
+.container {
+    padding: 70px 0;
+}
+     
+ /* Barra de navegação */
+header, .navbar {
+    /* background-color: #16191b; */
+    background-color: #333333;
+    overflow: hidden;
+}
+    
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+    
+#logo {
+    width: 75px;
+}
+
+.name{
+    margin-right: 5px;
+}
+
+.navbar-brand {
+    margin-left: 10px;
+    padding: 0;
+    color: rgb(231, 30, 231);
+    font-family: Teste;
+    /* font-size: 50px; */
+}
+    
+#navbar-brand:hover {
+    color: #FFF;
+}
+
+.texto{
+    font-family: Teste;
+}
+    
+#navbar-links a {
+    color: rgb(231, 30, 231);
+    font-family: Teste;
+    font-size: 17px;
+}
+  
+#navbar-links a:hover{
+    color: white;
+}
+    
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}
+    
+.nav-item.active {
+    border-bottom: 3px solid #FFF;
+}
+  
+
+.caixa{
+    margin-right: 45px;
+    margin-left: 20px;
+}
+
+
+.botao {
+    /* background-color: yellowgreen; */
+    text-align: center;
+    font-weight: 700;
+    background-color: rgb(231, 30, 231);
+    color: #FFF;
+    border-color: #FFF;
+    width: 120%;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: Teste; 
+}
+
+.botao:hover {    
+    background-color: #ffff;
+    color: rgb(231, 30, 231);
+    border-color: rgb(231, 30, 231);;
+    cursor: pointer;
+}
+
+.version {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 0.6em; 
+    margin-left: 5px;
+}

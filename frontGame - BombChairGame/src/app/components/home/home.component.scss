@@ -1,0 +1,152 @@
+@font-face {
+    font-family: Teste;
+    src: url(../../../assets/font/the-video-arcade-game-font-arcade.ttf);
+}
+
+@font-face {
+    font-family: Teste2;
+    src: url(../../../assets/font/RetroGaming.ttf);
+
+}
+
+body {
+    font-family: Teste;
+    background-color: #333333;
+    color: rgb(231, 30, 231);
+}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+.quemSou-titulo {
+    display: flex;
+    justify-content: center;
+    font-family: Teste2;
+    color: rgb(231, 30, 231);
+
+}
+
+.quemSou-texto {
+    display: flex;
+    justify-content: center;
+    // font-family: Teste;
+    font-family: Teste2;
+    font-weight: 800;
+    color: rgb(231, 30, 231);
+    // max-height: 300px; 
+    overflow: auto; 
+    margin-top: 1px;
+    margin: 5px;
+}
+
+
+.container {
+    padding: 70px 0;
+    
+}
+
+.container-fluid{ 
+    padding: 0;
+    
+}
+
+#quemSou-area{
+    height: 30px;
+}
+
+.quemSou-titulo {
+    margin: 35px 0 65px 0 ;
+    font-size: 40px;
+    text-align: center;
+}
+
+.wh{
+    width: 23%;
+}
+
+.item1{
+    width: 40%;  
+}
+
+.imagemAvatar {    
+    border-radius: 50%;
+    border: 3px solid ;
+    left: 0; bottom:25px; right: 0;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    max-width: 100%;
+}
+
+.border {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid ;
+    left: 0; bottom:25px; right: 0;
+    margin: auto;
+}
+  
+.card {
+    height: 250px;
+    width: 250px;
+    background: #808080;
+    border-radius: 100px;
+    transition: background 0.8s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card0 {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid ;
+    left: 0; bottom:25px; right: 0;
+    margin: auto;
+    background: url("../../../assets/images/safeimagekit-pixel-art.png") center center no-repeat;
+    background-size: 260px;
+}
+.card0:hover {
+    background: url("../../../assets/images/safeimagekit-pixel-art.png") left center no-repeat;
+    background-size: 460px;
+    
+}
+.card0:hover h2 {
+    opacity: 1;
+}
+.card0:hover .fa {
+    opacity: 1;
+}
+
+.teste{
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+@media (max-width: 767px) {
+    .quemSou {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quemSou-texto {
+        margin-top: -10px;
+        text-align: center;
+    }
+
+    .imagemAvatar {
+        margin-top: -50px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
